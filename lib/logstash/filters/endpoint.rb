@@ -2,12 +2,12 @@
 require "logstash/filters/base"
 require "logstash/namespace"
 
-require_relative "util/endpoint_constant"
+require_relative "util/malware_constant"
 require_relative "util/aerospike_config"
 require_relative "store/aerospike_store"
 
 class LogStash::Filters::Endpoint < LogStash::Filters::Base
-  include EndpointConstant
+  include MalwareConstant
   include Aerospike
 
   config_name "endpoint"
